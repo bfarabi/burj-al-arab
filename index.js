@@ -11,7 +11,11 @@ app.use(express.json());
 app.use(cors());
 const port = 5000
 
-
+app.get('/', (req, res) => {
+    
+        res.send('heroku is working');
+    
+})
 
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
